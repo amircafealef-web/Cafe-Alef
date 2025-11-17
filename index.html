@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منوی کافه الف</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background: linear-gradient(135deg, #2c1810 0%, #4a2c1a 100%);
+            color: #d4a574;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #3d2416;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #5c3a24 0%, #4a2c1a 100%);
+            padding: 30px 20px;
+            text-align: center;
+            border-bottom: 3px solid #d4a574;
+            position: relative;
+        }
+        
+        .logo-container {
+            display: inline-block;
+            position: relative;
+        }
+        
+        .logo-badge {
+            width: 140px; 
+            height: 140px; 
+            background: linear-gradient(135deg, #d4a574 0%, #c49563 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            border: 4px solid #5c3a24;
+            box-shadow: 0 5px 20px rgba(212, 165, 116, 0.3);
+            overflow: hidden; 
+        }
+        
+        .logo-badge img {
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover; 
+        }
+        
+        .cafe-subtitle {
+            font-size: 22px; 
+            color: #b8925f;
+            margin-top: 10px;
+            font-weight: 600;
+        }
+        
+        .instagram {
+            color: #d4a574;
+            font-size: 16px;
+            margin-top: 15px;
+            opacity: 0.9;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px; 
+            direction: ltr; /* <<< این خط برای حل مشکل اضافه شد */
+        }
+        
+        .menu-title {
+            background: #d4a574;
+            color: #3d2416;
+            padding: 15px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+        
+        .menu-section {
+            padding: 25px;
+            border-bottom: 2px solid #5c3a24;
+        }
+        
+        .menu-section:last-child {
+            border-bottom: none;
+        }
+        
+        .section-title {
+            font-size: 22px;
+            color: #d4a574;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #5c3a24;
+            font-weight: 700;
+        }
+        
+        .menu-grid {
+            display: grid;
+            gap: 12px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        }
+        
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 15px;
+            background: rgba(92, 58, 36, 0.3);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .menu-item:hover {
+            background: rgba(92, 58, 36, 0.5);
+            transform: translateX(-5px);
+        }
+        
+        .item-name {
+            color: #d4a574;
+            font-size: 16px;
+        }
+        
+        .item-price {
+            color: #c49563;
+            font-weight: 700;
+            font-size: 16px;
+        }
+        
+        .decoration {
+            text-align: center;
+            padding: 20px;
+            opacity: 0.3;
+        }
+        
+        .coffee-icon {
+            font-size: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo-container">
+                <div class="logo-badge">
+                    <img src="logo.jpg" alt="لوگوی کافه الف">
+                </div>
+            </div>
+            <div class="cafe-subtitle">CAFE ROASTERY ALEF</div>
+            <div class="instagram">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.703.01 5.556 0 5.829 0 8s.01 2.444.048 3.297c.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.556 15.99 5.829 16 8 16s2.444-.01 3.297-.048c.852-.04 1.433-.174 1.942-.372.526-.205.972-.478 1.417-.923.445-.444.719-.891.923-1.417.198-.51.333-1.09.372-1.942C15.99 10.444 16 10.171 16 8s-.01-2.444-.048-3.297c-.04-.852-.174-1.433-.372-1.942a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.942-.372C10.444.01 10.171 0 8 0M1.44 8a6.57 6.57 0 0 1 .046-1.232c.035-.78.166-1.203.275-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.486-.275C6.389 1.447 6.64 1.44 8 1.44s1.611.007 2.454.046c.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.282.24.705.275 1.486.039.843.047 1.096.047 3.232s-.008 2.389-.047 3.232c-.035.78-.166-1.203-.275 1.486a2.47 2.47 0 0 1-.599.92c-.28.28-.546-.453-.92.598-.282-.11-.705-.24-1.486.275C9.611 14.553 9.36 14.56 8 14.56s-1.611-.007-2.454-.046c-.78-.036-1.203-.166-1.486-.275a2.47 2.47 0 0 1-.92-.599c-.28-.28-.453-.546-.598-.92-.11-.282-.24-.705-.275-1.486A6.57 6.57 0 0 1 1.44 8m6.56-3.595a3.595 3.595 0 1 0 0 7.19 3.595 3.595 0 0 0 0-7.19m0 5.76a2.165 2.165 0 1 1 0-4.33 2.165 2.165 0 0 1 0 4.33m4.673-6.195a.825.825 0 1 0-1.65 0 .825.825 0 0 0 1.65 0"/>
+                </svg>
+                <span>Cafe_alef_shop</span>
+            </div>
+        </div>
+        
+        <div class="menu-title">MENU</div>
+
+        <!-- بقیه منو بدون تغییر در اینجا قرار دارد -->
+        <div class="menu-section">
+            <div class="section-title">بر پایه اسپرسو</div>
+            <div class="menu-grid">
+                <div class="menu-item"><span class="item-name">سینگل</span><span class="item-price">۵۰</span></div>
+                <div class="menu-item"><span class="item-name">دبل (۱۰۰٪ روبوستا)</span><span class="item-price">۶۵</span></div>
+                <div class="menu-item"><span class="item-name">دبل (۷۰٪ روبوستا)</span><span class="item-price">۶۵</span></div>
+                <div class="menu-item"><span class="item-name">دبل (۵۰٪/۵۰٪)</span><span class="item-price">۷۵</span></div>
+                <div class="menu-item"><span class="item-name">دبل (۷۰٪ عربیکا)</span><span class="item-price">۸۰</span></div>
+                <div class="menu-item"><span class="item-name">دبل (۱۰۰٪ عربیکا)</span><span class="item-price">۸۵</span></div>
+                <div class="menu-item"><span class="item-name">لته</span><span class="item-price">۱۱۰</span></div>
+                <div class="menu-item"><span class="item-name">کاپوچینو</span><span class="item-price">۱۰۰</span></div>
+                <div class="menu-item"><span class="item-name">موکا</span><span class="item-price">۱۲۰</span></div>
+                <div class="menu-item"><span class="item-name">کارامل ماکیاتو</span><span class="item-price">۱۲۰</span></div>
+                <div class="menu-item"><span class="item-name">فندق ماکیاتو</span><span class="item-price">۱۲۵</span></div>
+                <div class="menu-item"><span class="item-name">کوکونات ماکیاتو</span><span class="item-price">۱۴۵</span></div>
+                <div class="menu-item"><span class="item-name">کورتادو</span><span class="item-price">۸۵</span></div>
+                <div class="menu-item"><span class="item-name">آیریش لته</span><span class="item-price">۱۴۵</span></div>
+                <div class="menu-item"><span class="item-name">آمریکانو</span><span class="item-price">۸۵</span></div>
+                <div class="menu-item"><span class="item-name">اسپرسو ماکیاتو</span><span class="item-price">۷۵</span></div>
+                <div class="menu-item"><span class="item-name">کوبانو</span><span class="item-price">۷۵</span></div>
+                <div class="menu-item"><span class="item-name">پامپکین اسپایس لته</span><span class="item-price">۱۶۵</span></div>
+            </div>
+        </div>
+        
+        <div class="menu-section">
+            <div class="section-title">بار گرم</div>
+            <div class="menu-grid">
+                <div class="menu-item"><span class="item-name">چاکلت پینات</span><span class="item-price">۱۵۵</span></div>
+                <div class="menu-item"><span class="item-name">شیر عسل دارچین</span><span class="item-price">۱۰۰</span></div>
+                <div class="menu-item"><span class="item-name">هات چاکلت</span><span class="item-price">۱۰۵</span></div>
+                <div class="menu-item"><span class="item-name">وایت چاکلت</span><span class="item-price">۱۰۵</span></div>
+                <div class="menu-item"><span class="item-name">دارک چاکلت</span><span class="item-price">۱۲۵</span></div>
+                <div class="menu-item"><span class="item-name">پینک چاکلت</span><span class="item-price">۱۰۵</span></div>
+                <div class="menu-item"><span class="item-name">شیر نوتلا</span><span class="item-price">۱۱۰</span></div>
+                <div class="menu-item"><span class="item-name">شیر کاکائو</span><span class="item-price">۹۵</span></div>
+                <div class="menu-item"><span class="item-name">ماسالا</span><span class="item-price">۱۱۰</span></div>
+                <div class="menu-item"><span class="item-name">کرک پسته</span><span class="item-price">۱۳۵</span></div>
+                <div class="menu-item"><span class="item-name">کرک هل و زعفران</span><span class="item-price">۱۳۵</span></div>
+                <div class="menu-item"><span class="item-name">شیر گرم</span><span class="item-price">۴۵</span></div>
+                <div class="menu-item"><span class="item-name">چای ماچا</span><span class="item-price">۱۰۵</span></div>
+                <div class="menu-item"><span class="item-name">لته ماچا</span><span class="item-price">۱۴۵</span></div>
+            </div>
+        </div>
+
+        <div class="menu-section">
+            <div class="section-title">بار سرد</div>
+            <div class="menu-grid">
+                <div class="menu-item"><span class="item-name">آیس آمریکانو</span><span class="item-price">۱۱۰</span></div>
+                <div class="menu-item"><span class="item-name">آیس موکا</span><span class="item-price">۱۴۰</span></div>
+                <div class="menu-item"><span class="item-name">آیس لته</span><span class="item-price">۱۲۵</span></div>
+                <div class="menu-item"><span class="item-name">آیس کوکونات</span><span class="item-price">۱۶۵</span></div>
+                <div class="menu-item"><span class="item-name">آفوگاتو</span><span class="item-price">۱۲۵</span></div>
+                <div class="menu-item"><span class="item-name">آدرنالین</span><span class="item-price">۱۹۵</span></div>
+                <div class="menu-item"><span class="item-name">آیریش آفوگاتو</span><span class="item-price">۱۴۵</span></div>
+                <div class="menu-item"><span class="item-name">آیس کارامل</span><span class="item-price">۱۴۰</span></div>
+            </div>
+        </div>
+
+        <div class="menu-section">
+            <div class="section-title">میلک شیک</div>
+            <div class="menu-grid">
+                <div class="menu-item"><span class="item-name">قهوه</span><span class="item-price">۱۶۵</span></div>
+                <div class="menu-item"><span class="item-name">لوتوس</span><span class="item-price">۱۶۵</span></div>
+                <div class="menu-item"><span class="item-name">مادر</span><span class="item-price">۱۶۵</span></div>
+                <div class="menu-item"><span class="item-name">اورئو</span><span class="item-price">۱۷۵</span></div>
+                <div class="menu-item"><span class="item-name">شکلات</span><span class="item-price">۱۶۵</span></div>
+                <div class="menu-item"><span class="item-name">کیت کت</span><span class="item-price">۱۷۵</span></div>
+                <div class="menu-item"><span class="item-name">توت فرنگی</span><span class="item-price">۱۶۵</span></div>
+                <div class="menu-item"><span class="item-name">نوتلا</span><span class="item-price">۲۰۰</span></div>
+                <div class="menu-item"><span class="item-name">نوتلا موز</span><span class="item-price">۲۱۰</span></div>
+                <div class="menu-item"><span class="item-name">موز شکلات</span><span class="item-price">۱۷۵</span></div>
+                <div class="menu-item"><span class="item-name">سن مارکو</span><span class="item-price">۲۱۰</span></div>
+                <div class="menu-item"><span class="item-name">بادام زمینی</span><span class="item-price">۱۹۰</span></div>
+                <div class="menu-item"><span class="item-name">بادام زمینی موز</span><span class="item-price">۲۱۰</span></div>
+                <div class="menu-item"><span class="item-name">بادام زمینی فندق</span><span class="item-price">۲۲۰</span></div>
+                <div class="menu-item"><span class="item-name">بادام زمینی پسته</span><span class="item-price">۲۴۰</span></div>
+                <div class="menu-item"><span class="item-name">بادام زمینی شکلات</span><span class="item-price">۱۹۰</span></div>
+                <div class="menu-item"><span class="item-name">نارگیل</span><span class="item-price">۱۹۰</span></div>
+            </div>
+        </div>
+
+        <div class="menu-section">
+            <div class="section-title">موکتل</div>
+            <div class="menu-grid">
+                <div class="menu-item"><span class="item-name">موهیتو</span><span class="item-price">۱۲۰</span></div>
+                <div class="menu-item"><span class="item-name">لیمونات</span><span class="item-price">۱۰۰</span></div>
+                <div class="menu-item"><span class="item-name">وایت نایت</span><span class="item-price">۱۴۵</span></div>
+                <div class="menu-item"><span class="item-name">بلوهاوایی</span><span class="item-price">۱۶۵</span></div>
+                <div class="menu-item"><span class="item-name">کاپرینا</span><span class="item-price">۱۶۵</span></div>
+                <div class="menu-item"><span class="item-name">بلا برلین</span><span class="item-price">۱۸۵</span></div>
+                <div class="menu-item"><span class="item-name">برزیل</span><span class="item-price">۱۸۵</span></div>
+                <div class="menu-item"><span class="item-name">رز بری</span><span class="item-price">۱۴۵</span></div>
+                <div class="menu-item"><span class="item-name">سیب و دارچین</span><span class="item-price">۱۴۵</span></div>
+                <div class="menu-item"><span class="item-name">جینجر لایم</span><span class="item-price">۱۸۵</span></div>
+                <div class="menu-item"><span class="item-name">ردکوئین</span><span class="item-price">۱۴۵</span></div>
+                <div class="menu-item"><span class="item-name">بلک رست</span><span class="item-price">۱۶۵</span></div>
+                <div class="menu-item"><span class="item-name">جینجر منگو</span><span class="item-price">۱۸۵</span></div>
+                <div class="menu-item"><span class="item-name">رینبو</span><span class="item-price">۱۶۵</span></div>
+                <div class="menu-item"><span class="item-name">پیناکولادا</span><span class="item-price">۱۸۵</span></div>
+            </div>
+        </div>
+        
+        <div class="menu-section">
+            <div class="section-title">گلاسه</div>
+            <div class="menu-grid">
+                <div class="menu-item"><span class="item-name">شکلات موز</span><span class="item-price">۱۳۰</span></div>
+                <div class="menu-item"><span class="item-name">شکلات توت فرنگی</span><span class="item-price">۱۲۰</span></div>
+                <div class="menu-item"><span class="item-name">کافه گلاسه</span><span class="item-price">۱۲۰</span></div>
+                <div class="menu-item"><span class="item-name">نوتلا</span><span class="item-price">۱۴۰</span></div>
+                <div class="menu-item"><span class="item-name">توت فرنگی</span><span class="item-price">۱۲۰</span></div>
+                <div class="menu-item"><span class="item-name">پینات</span><span class="item-price">۱۴۰</span></div>
+            </div>
+        </div>
+
+        <div class="menu-section">
+            <div class="section-title">دمی</div>
+            <div class="menu-grid">
+                <div class="menu-item"><span class="item-name">سایفون</span><span class="item-price">۱۸۵</span></div>
+                <div class="menu-item"><span class="item-name">کمکس</span><span class="item-price">۱۸۵</span></div>
+                <div class="menu-item"><span class="item-name">وی شصت</span><span class="item-price">۱۸۵</span></div>
+                <div class="menu-item"><span class="item-name">فرانسه</span><span class="item-price">۱۸۵</span></div>
+                <div class="menu-item"><span class="item-name">ترک</span><span class="item-price">۹۵</span></div>
+                <div class="menu-item"><span class="item-name">یونانی</span><span class="item-price">۱۱۰</span></div>
+                <div class="menu-item"><span class="item-name">فیلتر کافی</span><span class="item-price">۱۱۰</span></div>
+            </div>
+        </div>
+
+        <div class="menu-section">
+            <div class="section-title">دم نوش و کیک</div>
+            <div class="menu-grid">
+                <div class="menu-item"><span class="item-name">چای سیاه</span><span class="item-price">۵۵</span></div>
+                <div class="menu-item"><span class="item-name">زعفران</span><span class="item-price">۱۱۰</span></div>
+                <div class="menu-item"><span class="item-name">هل دارچین میخک</span><span class="item-price">۶۵</span></div>
+                <div class="menu-item"><span class="item-name">چای ترش</span><span class="item-price">۹۵</span></div>
+                <div class="menu-item"><span class="item-name">گل گاو زبان</span><span class="item-price">۱۳۵</span></div>
+                <div class="menu-item"><span class="item-name">آرامش</span><span class="item-price">۱۳۵</span></div>
+                <div class="menu-item"><span class="item-name">سرماخوردگی</span><span class="item-price">۱۳۰</span></div>
+                <div class="menu-item"><span class="item-name">مسکن</span><span class="item-price">۱۳۰</span></div>
+                <div class="menu-item"><span class="item-name">ترکیبی</span><span class="item-price">۱۴۵</span></div>
+                <div class="menu-item"><span class="item-name">مراکشی</span><span class="item-price">۱۴۵</span></div>
+                <div class="menu-item"><span class="item-name">گوارش</span><span class="item-price">۱۳۰</span></div>
+                <div class="menu-item"><span class="item-name">انواع کیک</span><span class="item-price">۱۳۰</span></div>
+            </div>
+        </div>
+
+        <div class="menu-section">
+            <div class="section-title">سرد نوش</div>
+            <div class="menu-grid">
+                <div class="menu-item"><span class="item-name">الف</span><span class="item-price">۱۴۵</span></div>
+                <div class="menu-item"><span class="item-name">هل و زعفران</span><span class="item-price">۱۴۵</span></div>
+                <div class="menu-item"><span class="item-name">لیمو زعفران</span><span class="item-price">۱۴۵</span></div>
+                <div class="menu-item"><span class="item-name">آرامش</span><span class="item-price">۱۴۵</span></div>
+                <div class="menu-item"><span class="item-name">بیدمشک و بهارنارنج</span><span class="item-price">۱۴۵</span></div>
+                <div class="menu-item"><span class="item-name">خیار سکنجبین</span><span class="item-price">۱۴۵</span></div>
+                <div class="menu-item"><span class="item-name">کاسنی شاطره</span><span class="item-price">۱۴۵</span></div>
+            </div>
+        </div>
+
+        <div class="decoration">
+            <div class="coffee-icon">☕</div>
+        </div>
+    </div>
+</body>
+</html>
